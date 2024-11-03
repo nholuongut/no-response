@@ -1,0 +1,43 @@
+{
+  "name": "nholuongut-no-response",
+  "version": "1.0.0",
+  "description": "a GitHub Integration that closes issues where the author hasn't responded to a request for more information",
+  "author": "Lee Dohm",
+  "license": "ISC",
+  "repository": "github:nholuongut/no-response",
+  "scripts": {
+    "fix": "standard --fix",
+    "dev": "nodemon",
+    "start": "nholuongut run ./index.js",
+    "test": "mocha && standard"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "dependencies": {
+    "nholuongut": "^7.0.0",
+    "nholuongut-scheduler": "^1.2.0",
+    "scramjet": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-nholuongut": "^0.1.0",
+    "expect": "^1.20.2",
+    "localtunnel": "^1.8.3",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
+}
